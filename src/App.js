@@ -42,11 +42,11 @@ function sortFunc(event)
 function searcData(event)
 {
   const str=event.target.value
-  // const x=[...snacks].filter((val)=>val.product_name.toLowerCase().includes(str))
-  // setData(x)
-  const y=[...snacks].filter(({ingredients})=>ingredients.filter((val)=>val.toLowerCase().includes(str)))
+  const x=[...snacks].filter((val)=>val.product_name.toLowerCase().includes(str))
+  setData(x)
+  const y=[...snacks].map(({ingredients})=>ingredients.filter((val)=>val.toLowerCase().includes(str)))
   console.log(y)
-  setData(y)
+  // setData(y)
 }
   const [snacksData,setData]=useState(snacks)
   const [sortBy,setSort]=useState(false)
